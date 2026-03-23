@@ -8,11 +8,11 @@
 
 ## Descripción
 
-Materiales del Taller 1 del curso, centrado en el diseño e implementación de una tarea de categorización de expresiones emocionales en PsychoPy Builder.
+Este repositorio contiene la **solución completa** del Taller 1 del curso, centrado en el diseño e implementación de una tarea de categorización de expresiones emocionales en PsychoPy Builder.
 
 La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utilizando el **Ulima Emotional Faces Dataset**, un dataset de expresiones emocionales en rostros latinos desarrollado en la Universidad de Lima (Suni Lopez et al., 2024-2025).
 
-> **Nota:** El archivo `.psyexp` será completado durante el taller. Al finalizar la semana se subirá la versión resuelta a este repositorio.
+> **Nota:** Este repositorio se publica al finalizar el taller como material de referencia.
 
 ---
 
@@ -23,16 +23,16 @@ La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utiliz
 3. Descomprimir el archivo en tu computadora
 4. Abrir PsychoPy Builder y cargar el archivo `categorizacion_emocional.psyexp`
 
-> **Importante:** No mover ni renombrar ninguna carpeta. PsychoPy necesita encontrar los archivos exactamente en las rutas que se configurarán durante el taller.
+> **Importante:** No mover ni renombrar ninguna carpeta. PsychoPy necesita encontrar los archivos exactamente en las rutas configuradas durante el taller.
 
 ---
 
 ## Estructura del repositorio
 
 ```
-taller_1_emociones/
+solucion_taller_1/
 │
-├── categorizacion_emocional.psyexp     # Archivo del experimento (se completa en el taller)
+├── categorizacion_emocional.psyexp     # Archivo del experimento completo
 │
 ├── conditions/
 │   ├── condiciones_experimental.xlsx   # 40 trials — fase experimental
@@ -80,7 +80,7 @@ instrucciones → inicio_practica
 
 Una vez completada la tarea, el CSV generado por PsychoPy puede procesarse en la aplicación web del curso:
 
-**🔗 [marcelolanda.github.io/emotion-task-results](https://marcelolanda.github.io/emotion-task-results)**
+**🔗 [mlandaf.github.io/taller_1_resultados](https://mlandaf.github.io/taller_1_resultados)**
 
 No se requiere instalar ningún software adicional. Solo arrastra tu archivo CSV al navegador.
 
