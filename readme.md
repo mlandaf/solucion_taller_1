@@ -38,6 +38,10 @@ solucion_taller_1/
 │   ├── condiciones_experimental.xlsx   # 40 trials — fase experimental
 │   └── condiciones_practica.xlsx       # 12 trials — fase de práctica con palabras
 │
+├── docs/
+│   ├── instrucciones_categorizacion_emocional.docx # Docx con las instrucciones de la tarea
+│   └── guia_materiales_taller1.docx # Docx con la guia de los materiales del taller 1
+│
 ├── media/
 │   ├── anger/        # Fotografías de ira      (anger_01.png … anger_40.png)
 │   ├── fear/         # Fotografías de miedo    (fear_01.png … fear_40.png)
