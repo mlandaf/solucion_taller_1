@@ -71,33 +71,37 @@ solucion_taller_1/
 ### Flujo de la tarea
 
 ```mermaid
-flowchart TD
-    A[instrucciones] --> B[instrucciones_practica]
+flowchart TB
+ subgraph LP["loop_practica × 12"]
+        FP["feedback_practica"]
+        P["practica"]
+  end
+ subgraph LE["loop_experimental × 40"]
+        ITI["ITI"]
+        EX["experimental"]
+  end
+    A["instrucciones"] --> B["instrucciones_practica"]
     B --> LP
-    subgraph LP[loop_practica × 12]
-        P[practica] --> FP[feedback_practica]
-    end
-    LP --> C[fin_practica]
-    C --> D[descanso 60 s]
-    D --> E[instrucciones_experimental]
+    P --> FP
+    LP --> C["fin_practica"]
+    C --> D["descanso 60 s"]
+    D --> E["instrucciones_experimental"]
     E --> LE
-    subgraph LE[loop_experimental × 40]
-        EX[experimental] --> ITI[ITI]
-    end
-    LE --> F[fin_experimento]
+    EX --> ITI
+    LE --> F["fin_experimento"]
 
-    style A  fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
-    style C  fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
-    style F  fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
-    style D  fill:#FAC775,stroke:#BA7517,color:#412402
+    style FP fill:#AFA9EC,stroke:#534AB7,color:#26215C
+    style P  fill:#AFA9EC,stroke:#534AB7,color:#26215C
+    style ITI fill:#5DCAA5,stroke:#0F6E56,color:#04342C
+    style EX fill:#5DCAA5,stroke:#0F6E56,color:#04342C
+    style A  fill:#D3D1C7,stroke:#D50000,color:#2C2C2A,fill:#FFCDD2
     style B  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style LP fill:#EEEDFE,stroke:#534AB7,color:#26215C
-    style P  fill:#AFA9EC,stroke:#534AB7,color:#26215C
-    style FP fill:#AFA9EC,stroke:#534AB7,color:#26215C
+    style C  fill:#D3D1C7,stroke:#534AB7,color:#2C2C2A,fill:#AFA9EC
+    style D  fill:#FAC775,stroke:#BA7517,color:#412402
     style E  fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style LE fill:#E1F5EE,stroke:#0F6E56,color:#04342C
-    style EX fill:#5DCAA5,stroke:#0F6E56,color:#04342C
-    style ITI fill:#5DCAA5,stroke:#0F6E56,color:#04342C
+    style F  fill:#D3D1C7,stroke:#FFD600,color:#2C2C2A,fill:#FFF9C4
 ```
 
 ---
