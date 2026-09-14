@@ -1,14 +1,14 @@
 # Taller 1 — Categorización de Expresiones Emocionales
 
 - **Asignatura:** Investigación e Intervención desde las Neurociencias Aplicadas  
-- **Ciclo:** 2026-1  
+- **Ciclo:** 2026-2
 - **Autor:** Marcelo Landa
 
 ---
 
 ## Descripción
 
-Este repositorio contiene la **solución completa** del Taller 1 del curso, centrado en el diseño e implementación de una tarea de categorización de expresiones emocionales en PsychoPy Builder. La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utilizando el **Ulima Emotional Faces Dataset**, un dataset de expresiones emocionales en rostros latinos desarrollado en la Universidad de Lima.
+Materiales del Taller 1 del curso, centrado en el diseño e implementación de una tarea de categorización de expresiones emocionales en PsychoPy Builder. La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utilizando el **Ulima Emotional Faces Dataset**, un dataset de expresiones emocionales en rostros latinos desarrollado en la Universidad de Lima.
 
 > **Nota:** Este repositorio se publica al finalizar el taller como material de referencia.
 
@@ -21,30 +21,26 @@ Este repositorio contiene la **solución completa** del Taller 1 del curso, cent
 3. Descomprimir el archivo en tu computadora
 4. Abrir PsychoPy Builder y cargar el archivo `categorizacion_emocional.psyexp`
 
-> **Importante:** No mover ni renombrar ninguna carpeta. PsychoPy necesita encontrar los archivos exactamente en las rutas configuradas durante el taller.
+> **Importante:** No mover ni renombrar ninguna carpeta. PsychoPy necesita encontrar los archivos exactamente en las rutas que se configurarán durante el taller.
 
 ---
 
 ## Estructura del repositorio
 
 ```
-solucion_taller_1/
+taller_1_emociones/
 │
-├── categorizacion_emocional.psyexp     # Archivo del experimento completo
+├── categorizacion_emocional.psyexp     # Archivo del experimento (se completa en el taller)
 │
 ├── conditions/
 │   ├── condiciones_experimental.xlsx   # 40 trials — fase experimental
 │   └── condiciones_practica.xlsx       # 12 trials — fase de práctica con palabras
 │
-├── docs/
-│   ├── instrucciones_categorizacion_emocional.docx # Docx con las instrucciones de la tarea
-│   └── guia_materiales_taller1.docx # Docx con la guia de los materiales del taller 1
-│
 ├── media/
-│   ├── anger/        # Fotografías de ira      (anger_01.png … anger_40.png)
-│   ├── fear/         # Fotografías de miedo    (fear_01.png … fear_40.png)
-│   ├── happiness/    # Fotografías de alegría  (happiness_01.png … happiness_40.png)
-│   ├── sadness/      # Fotografías de tristeza (sadness_01.png … sadness_40.png)
+│   ├── anger/        # Fotografías de ira      (anger_01.png … anger_10.png)
+│   ├── fear/         # Fotografías de miedo    (fear_01.png … fear_10.png)
+│   ├── happiness/    # Fotografías de alegría  (happiness_01.png … happiness_10.png)
+│   ├── sadness/      # Fotografías de tristeza (sadness_01.png … sadness_10.png)
 │   └── practice/     # Estímulos de la fase de práctica
 │
 └── README.md
@@ -61,6 +57,7 @@ solucion_taller_1/
 | Teclas de respuesta | F (alegría) · G (tristeza) · H (ira) · J (miedo) |
 | Trials de práctica | 12 (palabras escritas, 3 por emoción) |
 | Trials experimentales | 40 (10 por emoción) |
+| Cruz de fijación | 500 ms, cruz blanca, antes de cada estímulo |
 | Presentación del estímulo | Free-viewing (hasta respuesta del participante) |
 | ITI | 500 ms |
 | Feedback | Solo en fase de práctica |
@@ -77,7 +74,7 @@ flowchart TD
         B[instrucciones_practica]
         B --> LP
         subgraph LP[loop_practica × 12]
-            P[practica] --> FP[feedback_practica]
+            CP[cruz_practica] --> P[practica] --> FP[feedback_practica]
         end
         LP --> C[fin_practica]
     end
@@ -88,7 +85,7 @@ flowchart TD
         E[instrucciones_experimental]
         E --> LE
         subgraph LE[loop_experimental × 40]
-            EX[experimental] --> ITI[ITI]
+            CE[cruz_experimental] --> EX[experimental] --> ITI[ITI]
         end
     end
     subgraph SC[CIERRE]
@@ -106,10 +103,12 @@ flowchart TD
     style B  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style C  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style LP fill:#EEEDFE,stroke:#534AB7,color:#26215C
+    style CP fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style P  fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style FP fill:#AFA9EC,stroke:#534AB7,color:#26215C
     style E  fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style LE fill:#E1F5EE,stroke:#0F6E56,color:#04342C
+    style CE fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style EX fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style ITI fill:#5DCAA5,stroke:#0F6E56,color:#04342C
     style SB fill:#EBF3FA,stroke:#2E6DA4,color:#0D2E4A
