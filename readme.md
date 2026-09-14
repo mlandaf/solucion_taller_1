@@ -10,7 +10,13 @@
 
 Materiales del Taller 1 del curso, centrado en el diseño e implementación de una tarea de categorización de expresiones emocionales en PsychoPy Builder. La tarea es una adaptación del Experimento 1 de Calvo & Lundqvist (2008) utilizando el **Ulima Emotional Faces Dataset**, un dataset de expresiones emocionales en rostros latinos desarrollado en la Universidad de Lima.
 
-> **Nota:** Este repositorio se publica al finalizar el taller como material de referencia.
+### Secuencia de fase práctica
+
+![Secuencia de fase práctica](media/secuencia_practica.png)
+
+### Secuencia de fase experimental
+
+![Secuencia de fase experimental](media/secuencia_experimental.png)
 
 ---
 
