@@ -1,4 +1,4 @@
-# Taller 1 — Categorización de Expresiones Emocionales
+# Taller 1 — Categorización de Expresiones Emocionales (Solución)
 
 - **Asignatura:** Investigación e Intervención desde las Neurociencias Aplicadas  
 - **Ciclo:** 2026-2
